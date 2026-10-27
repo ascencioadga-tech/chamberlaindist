@@ -100,6 +100,20 @@ body {
   animation-delay: var(--d, 0ms);
 }
 
+/* Phones: the arrow beside "swipe for more" keeps nudging to the right. */
+@keyframes swipe-hint {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+.swipe-hint {
+  animation: swipe-hint 1.4s ease-in-out infinite;
+}
+
 /* Outlet marquee. */
 @keyframes marquee {
   to {

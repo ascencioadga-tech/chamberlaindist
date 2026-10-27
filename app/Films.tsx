@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { copy, type Film, type Lang } from "./content";
+import { SwipeHint, useNudge } from "./Swipe";
 
 function Play({ size = 18 }: { size?: number }) {
   return (
@@ -29,6 +30,7 @@ export default function Films({ films, lang, head }: { films: Film[]; lang: Lang
   const [playing, setPlaying] = useState(false);
   const track = useRef<HTMLUListElement>(null);
   const screen = useRef<HTMLDivElement>(null);
+  useNudge(track);
 
   const choose = (f: Film) => {
     setCurrent(f);
@@ -157,6 +159,9 @@ export default function Films({ films, lang, head }: { films: Film[]; lang: Lang
           );
         })}
       </ul>
+      <div className="mt-5">
+        <SwipeHint label={copy[lang].swipe} />
+      </div>
     </>
   );
 }

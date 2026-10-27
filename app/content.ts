@@ -197,6 +197,7 @@ export const copy = {
     office: "Office",
     backToTop: "Chamberlain Distributing, back to top",
     switchTo: "Ver en español",
+    swipe: "Swipe for more",
     hero: {
       role: "President",
       company: "Chamberlain Distributing, Inc.",
@@ -267,6 +268,7 @@ export const copy = {
     office: "Oficina",
     backToTop: "Chamberlain Distributing, volver al inicio",
     switchTo: "View in English",
+    swipe: "Deslice para ver más",
     hero: {
       role: "Presidente",
       company: "Chamberlain Distributing, Inc.",

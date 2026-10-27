@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { Bi, Lang } from "./content";
+import { copy, type Bi, type Lang } from "./content";
+import { SwipeHint, useNudge } from "./Swipe";
 
 const STEP_MS = 4500;
 
@@ -10,6 +11,7 @@ const STEP_MS = 4500;
 export default function Honours({ items, lang }: { items: [Bi, Bi, string?][]; lang: Lang }) {
   const track = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
+  useNudge(track);
 
   const cardWidth = () => {
     const el = track.current;
@@ -70,6 +72,8 @@ export default function Honours({ items, lang }: { items: [Bi, Bi, string?][]; l
       </div>
 
       <div className="mt-4 flex items-center gap-3">
+        <SwipeHint label={copy[lang].swipe} dark />
+        <span className="flex-1 lg:hidden" />
         {([-1, 1] as const).map((dir) => (
           <button
             key={dir}
