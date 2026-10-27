@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- The Chamberlain badge, reduced to its mark: the sun rising over green field rows. -->
+  <defs>
+    <clipPath id="tile"><rect width="64" height="64" rx="14" /></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="64" height="64" fill="#faf8f3" />
+    <!-- rays -->
+    <g stroke="#f2c230" stroke-width="2.6" stroke-linecap="round">
+      <path d="M32 9v6" />
+      <path d="M17.5 14.5l3.6 4.4" />
+      <path d="M46.5 14.5l-3.6 4.4" />
+      <path d="M8.5 25.5l5.2 2" />
+      <path d="M55.5 25.5l-5.2 2" />
+    </g>
+    <!-- sun -->
+    <path d="M17 36a15 15 0 0 1 30 0z" fill="#f2c230" />
+    <!-- field rows fanning from the horizon -->
+    <rect y="36" width="64" height="28" fill="#1f7a3a" />
+    <g fill="#faf8f3">
+      <path d="M32 36 L6 64 L12 64 Z" />
+      <path d="M32 36 L19 64 L24 64 Z" />
+      <path d="M32 36 L31 64 L33 64 Z" />
+      <path d="M32 36 L40 64 L45 64 Z" />
+      <path d="M32 36 L52 64 L58 64 Z" />
+    </g>
+    <!-- the red line of the wordmark, as the horizon -->
+    <rect y="34" width="64" height="3.5" fill="#d0262d" />
+  </g>
+</svg>
